@@ -2,10 +2,10 @@
   "expo": {
     "name": "Test",
     "slug": "Test",
+    "scheme": "com.etnatrader.tradermobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
@@ -16,6 +16,23 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.etnatrader.tradermobile",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "com.etnatrader.tradermobile",
+              "path": "/callback"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -31,6 +48,11 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d4c85fe2-2f78-42cd-a3cc-35ec593c78d0"
+      }
     }
   }
 }
